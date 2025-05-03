@@ -18,33 +18,34 @@ Expected Result:
 The indicators and table correctly update to reflect the selected country's data
 
 TC03: 
-"Verify the pie chart displays the top 8 countries by inflation"	
+"Verify the pie chart table view"	
 
 1. Open the dashboard link
-2. Scroll to the pie chart
-3. Count the segments
-4. Read segment labels	
+2. Navigate to the pie chart
+3. Click with right button
+4. Click on "Show as a table" button	
 
 Expected Result:
-The pie chart contains exactly 8 segments, labeled with the correct country names	
+User us led on a new page - table view of the pie chart	
 
 TC04:	
 "Verify table data matches top indicators after selection"	
 
 1. Open the dashboard link
-2. Select a country
-3. Compare top indicators to corresponding row(s) in the table below	
+2. Select a country - Angola
+3. Compare top indicators to corresponding row(s) in the table below
 
 Expected Result:
 Data shown in top indicators matches the detailed data in the table	
 
 TC05:	
-"Verify data table supports sorting by column"
+"Verify excluding option in data table"
 
 1. Open the dashboard link
-2. Click on a column header (e.g., "GDP")
-3. Observe order of rows
-4. Click again to reverse order	
+2. Click on a country from the data table (e.g., "Angola")
+3. Click with right button on the selected row
+3. Observe the newly opened dialog window - should contain option "Exclude"
+4. Click on option "Exclude"
 
 Expected Result:
-Data should sort correctly ascending/descending when clicking on headers
+The whole row (country data) is deleted and missing from the table
