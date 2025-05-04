@@ -8,7 +8,6 @@ export class DashboardPage {
   readonly pieChart: Locator;
   readonly showAsTableButton: Locator;
   readonly gdpColumnHeader: Locator;
-  readonly gdpFirstCell: Locator;
 
   constructor(page: Page) 
   {
@@ -18,7 +17,6 @@ export class DashboardPage {
     this.pieChart = page.locator("(//*[name()='rect'][@class='clearCatcher'])[1]");
     this.showAsTableButton = page.locator("(//span[normalize-space()='Show as a table'])[1]");
     this.gdpColumnHeader = page.locator('[data-testid="gdp-header"]');
-    this.gdpFirstCell = page.locator('[data-testid="gdp-cell"]').first();
   }
 
   async gotoDashboard(url: string)
