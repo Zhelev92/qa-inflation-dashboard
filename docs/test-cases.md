@@ -11,8 +11,9 @@ TC02:
 "Verify selecting a country updates the data correctly"
 
 1. Open the dashboard link
-2. Click/select a specific country (e.g., "United States")
+2. Click/select a specific country (e.g., "Bahrain")
 3. Observe updates in the indicators and tables
+4. Click/select a specific country (e.g., "Angola")
 
 Expected Result:
 The indicators and table correctly update to reflect the selected country's data
