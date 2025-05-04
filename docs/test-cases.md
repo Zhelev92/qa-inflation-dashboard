@@ -27,7 +27,7 @@ TC03:
 4. Click on "Show as a table" button	
 
 Expected Result:
-User us led on a new page - table view of the pie chart	
+User is led on a new page - table view of the pie chart	
 
 TC04:	
 "Verify table data matches top indicators after selection"	
