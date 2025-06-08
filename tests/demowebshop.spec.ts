@@ -80,7 +80,7 @@ test.describe('Demo Web Shop Test Suite', () => {
     await home.subscribeToNewsletter(generateEmail());
   });
 
-  test('TC10: Sorting Products by Price (Low to High)', async ({ page }) => {
+  test('[@regression] TC10: Sorting Products by Price (Low to High)', async ({ page }) => {
     const cart = new CartPage(page);
     await cart.gotoBooksPage();
     await page.selectOption('select#products-orderby', '10');
