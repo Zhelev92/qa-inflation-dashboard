@@ -75,12 +75,12 @@ test.describe('Demo Web Shop Test Suite', () => {
     await checkout.checkoutAsGuest(generateEmail());
   });
 
-  test('[@regression] TC09: Newsletter Subscription', async ({ page }) => {
+  test('TC09: Newsletter Subscription', async ({ page }) => {
     const home = new HomePage(page);
     await home.subscribeToNewsletter(generateEmail());
   });
 
-  test('[@regression] TC10: Sorting Products by Price (Low to High)', async ({ page }) => {
+  test('TC10: Sorting Products by Price (Low to High)', async ({ page }) => {
     const cart = new CartPage(page);
     await cart.gotoBooksPage();
     await page.selectOption('select#products-orderby', '10');
