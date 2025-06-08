@@ -75,7 +75,7 @@ test.describe('Demo Web Shop Test Suite', () => {
     await checkout.checkoutAsGuest(generateEmail());
   });
 
-  test('TC09: Newsletter Subscription', async ({ page }) => {
+  test('[@regression] TC09: Newsletter Subscription', async ({ page }) => {
     const home = new HomePage(page);
     await home.subscribeToNewsletter(generateEmail());
   });
