@@ -1,5 +1,5 @@
-
-#  ICT Strypes – Inflation Dashboard Automation
+ 
+#  SwissCRM – Automation Project
 
 This repository contains automated UI tests for Inflation Dashboard using Playwright and TypeScript, following the **Page Object Model (POM)** pattern.
 
