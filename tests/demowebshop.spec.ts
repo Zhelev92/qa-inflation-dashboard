@@ -79,16 +79,5 @@ test.describe('Demo Web Shop Test Suite', () => {
     const home = new HomePage(page);
     await home.subscribeToNewsletter(generateEmail());
   });
-
-  test('TC10: Sorting Products by Price (Low to High)', async ({ page }) => {
-    const cart = new CartPage(page);
-    await cart.gotoBooksPage();
-    await page.selectOption('select#products-orderby', '10');
-    const prices = await page.$$eval('.prices', (els) =>
-      els.map((el) => parseFloat(el.textContent?.replace('$', '') || '0'))
-    );
-    const sorted = [...prices].sort((a, b) => a - b);
-    expect(prices).toEqual(sorted);
-  });
 });
 

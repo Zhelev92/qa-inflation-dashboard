@@ -17,14 +17,12 @@ export class CheckoutPage {
   readonly billingAddress = this.page.locator('#BillingNewAddress_Address1');
   readonly billingZip = this.page.locator('#BillingNewAddress_ZipPostalCode');
   readonly billingPhone = this.page.locator('#BillingNewAddress_PhoneNumber');
-  readonly billingAddressContinue = this.page.locator("//input[@onclick='Billing.save()']");
-
-  readonly shippingAddressContinue = this.page.locator("//input[@onclick='Shipping.save()']");
-  readonly shippingMethodContinue = this.page.locator("(//input[@class='button-1 shipping-method-next-step-button'])[1]");
-  readonly paymentMethodContinue = this.page.locator("//input[@class='button-1 payment-method-next-step-button']");
-  readonly paymentInformationContinue = this.page.locator("(//input[@class='button-1 payment-info-next-step-button'])[1]");
+  
+  readonly masterContinueBtn = this.page.getByRole('button', { name: 'Continue' });
   readonly confirmOrderBtn = this.page.locator("//input[@value='Confirm']");
-  readonly orderSuccessTitle = this.page.locator('.title');
+  readonly orderSuccessTitle = this.page.locator("//strong[normalize-space()='Your order has been successfully processed!']");
+  readonly orderDetailsBtn = this.page.getByRole('listitem').filter({ hasText: 'Click here for order details.' }); //second verification for order success
+  
 
   // Method: Full Guest Checkout Flow
   async checkoutAsGuest(email: string) {
@@ -40,13 +38,17 @@ export class CheckoutPage {
     await this.billingAddress.fill('123 Main St');
     await this.billingZip.fill('10001');
     await this.billingPhone.fill('1234567890');
-    await this.billingAddressContinue.click();
 
-    await this.shippingAddressContinue.click();
-    await this.shippingMethodContinue.click();
-    await this.paymentInformationContinue.click();
+    await this.masterContinueBtn.click();
+
+    await this.masterContinueBtn.click();
+    await this.masterContinueBtn.click();
+    await this.masterContinueBtn.click();
+    await this.masterContinueBtn.click();
     await this.confirmOrderBtn.click();
 
-    await expect(this.orderSuccessTitle).toContainText('Your order has been successfully processed!');
+    await expect(this.orderSuccessTitle).toBeVisible();
+    await expect(this.orderDetailsBtn).toBeVisible();
   }
 }
+

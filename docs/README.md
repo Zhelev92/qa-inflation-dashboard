@@ -43,12 +43,8 @@ npx playwright test tests/dashboard.spec.ts
 ### Use Playwright Codegen to Find Correct Locators
 
 ```bash
-npx playwright codegen https://app.fabric.microsoft.com/...
+npx playwright codegen https://demowebshop.tricentis.com/books
 ```
-
-This opens a browser and shows working locators as you click around.
-
----
 
 ## Visual Debugging
 
@@ -56,4 +52,5 @@ Debug with Browser Open
 
 ```bash
 npx playwright test --headed --debug
+npx playwright test --headed -g "TC08" --debug
 ```
