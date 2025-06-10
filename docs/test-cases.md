@@ -128,19 +128,3 @@ Steps:
 
 Expected Result: Success message confirming subscription appears.
 
-
-
-Test Case 10: Sorting Products
-ID: TC10
-
-Title: Sort items by price (low to high)
-
-Preconditions: User is on product category page
-
-Steps:
-1. Navigate to Apparel section
-2. Select 12 items on page
-3. Select “Price: Low to High” from sort dropdown
-
-Expected Result: Products appear sorted by price ascending.
-

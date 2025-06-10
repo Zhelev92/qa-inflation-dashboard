@@ -1,7 +1,7 @@
  
 #  SwissCRM – Automation Project
 
-This repository contains automated UI tests for Inflation Dashboard using Playwright and TypeScript, following the **Page Object Model (POM)** pattern.
+This repository contains automated UI tests for DemoShop using Playwright and TypeScript, following the **Page Object Model (POM)** pattern.
 
 ---
 
